@@ -7,14 +7,18 @@ using UnityEngine;
 public class BallScript : MonoBehaviour
 {
     [SerializeField] private Transform secondBall;
+    [SerializeField] private Transform fragmentedBall;
     [SerializeField] private float connectionForce;
     [SerializeField] private Vector2GameEvent levelCompleteEvent;
+    [SerializeField] private Vector2GameEvent deathEvent;
     
     private Rigidbody2D rb;
+    private ExplosionForce explosionForce;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        explosionForce = fragmentedBall.GetComponent<ExplosionForce>();
     }
 
     void Update()
@@ -28,6 +32,18 @@ public class BallScript : MonoBehaviour
         {
             levelCompleteEvent.RaiseGameEvent(other.GetContact(0).point);
             Debug.Log("Level complete");
+        }
+        
+        if (other.gameObject.CompareTag("Spikes"))
+        {
+            deathEvent.RaiseGameEvent(other.GetContact(0).point);
+            fragmentedBall.gameObject.SetActive(true);
+            fragmentedBall.parent = transform.parent;
+            explosionForce.Explode();
+            Debug.Log("Level lost");
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
         }
     }
 }

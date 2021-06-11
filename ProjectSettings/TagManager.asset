@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Spikes
+  - Water
   layers:
   - Default
   - TransparentFX

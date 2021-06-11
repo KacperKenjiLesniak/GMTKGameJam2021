@@ -24,4 +24,9 @@ public class LevelCompleteParticleEffect : MonoBehaviour, IArgumentGameEventList
             GetComponent<ParticleSystem>().Play();
         }
     }
+    
+    private void OnDestroy()
+    {
+        levelCompleteEvent.UnregisterListener(this);
+    }
 }
