@@ -5074,6 +5074,18 @@ PrefabInstance:
       propertyPath: secondBall
       value: 
       objectReference: {fileID: 6381221655633666639}
+    - target: {fileID: 6937589303574753434, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937589303574753434, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.87058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937589303574753434, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.972549
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
 --- !u!4 &5092884021039954330 stripped

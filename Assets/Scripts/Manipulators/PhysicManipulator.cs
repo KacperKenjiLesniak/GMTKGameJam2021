@@ -9,6 +9,13 @@ public abstract class PhysicManipulator : MonoBehaviour
     public float currentValue;
     public float changeSpeed;
     public Slider slider;
+    
+    public SliderAlphaChanger sliderAlphaChanger;
+
+    private void Awake()
+    {
+        sliderAlphaChanger = slider.GetComponent<SliderAlphaChanger>();
+    }
 
     protected virtual void Start()
     {
@@ -28,5 +35,10 @@ public abstract class PhysicManipulator : MonoBehaviour
         UpdatePhysicProperty();
     }
 
+    public void SetSelected(bool selected)
+    {
+        sliderAlphaChanger.SetSelected(selected);
+    }
+    
     protected abstract void UpdatePhysicProperty();
 }

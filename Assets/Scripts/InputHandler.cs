@@ -13,6 +13,7 @@ namespace DefaultNamespace.Physiurg
         private void Start()
         {
             if (physicManipulators.Count == 0) Debug.LogError("No physic manipulators provided"); 
+            SelectManipulator();
         }
 
         void Update()
@@ -22,13 +23,35 @@ namespace DefaultNamespace.Physiurg
             if (numberPressed > -1 && numberPressed <= physicManipulators.Count)
             {
                 activeManipulator = numberPressed;
+                SelectManipulator();
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                activeManipulator -= 1;
+                if (activeManipulator == 0) activeManipulator = physicManipulators.Count;
+                SelectManipulator();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                activeManipulator = activeManipulator % physicManipulators.Count + 1 ;
+                SelectManipulator();
             }
             
             ScaleInput();
             
             physicManipulators[activeManipulator - 1].Scale(Input.GetAxis("Vertical") * inputScaler);
         }
-        
+
+        private void SelectManipulator()
+        {
+            for (var i = 0; i < physicManipulators.Count; i++)
+            {
+                physicManipulators[i].SetSelected(i == activeManipulator - 1);
+            }
+        }
+
         private int GetPressedNumber() {
             for (var number = 0; number <= 9; number++) {
                 if (Input.GetKeyDown(number.ToString()))

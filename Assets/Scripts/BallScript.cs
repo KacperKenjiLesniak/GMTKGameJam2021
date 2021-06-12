@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
+    [SerializeField] public float connectionForce;
+    
     [SerializeField] private Transform secondBall;
     [SerializeField] private Transform fragmentedBall;
-    [SerializeField] private float connectionForce;
     [SerializeField] private Vector2GameEvent levelCompleteEvent;
     [SerializeField] private Vector2GameEvent deathEvent;
     
@@ -31,6 +32,8 @@ public class BallScript : MonoBehaviour
         if (other.gameObject.CompareTag("Ball"))
         {
             levelCompleteEvent.RaiseGameEvent(other.GetContact(0).point);
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
             Debug.Log("Level complete");
         }
         

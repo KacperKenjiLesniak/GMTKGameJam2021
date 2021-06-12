@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5993750760953320852}
   - component: {fileID: 5993750760953320859}
+  - component: {fileID: 7070163096147225594}
   - component: {fileID: 5993750760953320858}
+  - component: {fileID: 1553025992}
   m_Layer: 0
   m_Name: PhysicsManagers
   m_TagString: Untagged
@@ -45,8 +47,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicManipulators:
+  - {fileID: 7070163096147225594}
   - {fileID: 5993750760953320858}
+  - {fileID: 1553025992}
   inputScaler: 1
+--- !u!114 &7070163096147225594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993750760953320857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0825611937d2462a944d28e2ee669736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minValue: 0
+  maxValue: 10
+  currentValue: 6
+  changeSpeed: 2
+  slider: {fileID: 0}
+  sliderAlphaChanger: {fileID: 0}
+  ballScripts: []
 --- !u!114 &5993750760953320858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,9 +82,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51a71ec9caa4bd4aab67c9a57e16e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minValue: 0.1
+  minValue: 0.5
   maxValue: 2
   currentValue: 1
   changeSpeed: 2
   slider: {fileID: 0}
+  sliderAlphaChanger: {fileID: 0}
   rbs: []
+--- !u!114 &1553025992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993750760953320857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c543f4a841d04b8f9f4ca9d033f455d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minValue: 0
+  maxValue: 10
+  currentValue: 4
+  changeSpeed: 2
+  slider: {fileID: 0}
+  sliderAlphaChanger: {fileID: 0}
