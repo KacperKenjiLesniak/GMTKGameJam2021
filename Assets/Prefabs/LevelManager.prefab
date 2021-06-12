@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8492118031568850488}
   - component: {fileID: 1056901061253683522}
+  - component: {fileID: 298895906816807226}
+  - component: {fileID: 8792303578358417941}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -44,4 +46,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEvent: {fileID: 11400000, guid: c1dee4b96ebf7f5448b99a34882f4931, type: 2}
-  restartLevel: {fileID: 11400000, guid: a3802eae63b0c174ea0f44064e52cf3e, type: 2}
+  restartLevel: {fileID: 11400000, guid: a9a1e9256a9c45249bedb183b256f03c, type: 2}
+--- !u!114 &298895906816807226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7330703786390654773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1a7d9da9b9a564184d94ade7b51dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c1dee4b96ebf7f5448b99a34882f4931, type: 2}
+  onGameEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1056901061253683522}
+        m_TargetAssemblyTypeName: DefaultNamespace.Physiurg.LevelManager, Assembly-CSharp
+        m_MethodName: BallDied
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8792303578358417941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7330703786390654773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b2f85583a54b21922069d1d0951342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 96b6d40c71c33f9479b8fd26743ef934, type: 2}
+  onGameEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1056901061253683522}
+        m_TargetAssemblyTypeName: DefaultNamespace.Physiurg.LevelManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

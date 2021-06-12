@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GameEvents.Game;
 using UnityEngine;
 
 namespace DefaultNamespace.Physiurg
@@ -8,6 +9,8 @@ namespace DefaultNamespace.Physiurg
     {
         public List<PhysicManipulator> physicManipulators;
         public float inputScaler = 1f;
+        public GameEvent startGame;
+        
         private int activeManipulator = 1;
         
         private void Start()
@@ -18,6 +21,11 @@ namespace DefaultNamespace.Physiurg
 
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                startGame.RaiseGameEvent();
+            }
+            
             int numberPressed = GetPressedNumber();
 
             if (numberPressed > -1 && numberPressed <= physicManipulators.Count)

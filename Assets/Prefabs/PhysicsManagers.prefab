@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 5993750760953320858}
   - {fileID: 1553025992}
   inputScaler: 1
+  startGame: {fileID: 11400000, guid: 96b6d40c71c33f9479b8fd26743ef934, type: 2}
 --- !u!114 &7070163096147225594
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,15 +12,9 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
     [SerializeField] private float cameraZoomSpeed;
 
     private bool completed;
-    private Camera camera;
     private Vector2 winLocation;
-    private Vector3 cameraNewPosition;
     private float winTimer;
     
-    private void Awake()
-    {
-        camera = Camera.main;
-    }
 
     void Start()
     {
@@ -32,9 +26,7 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
         if (!completed)
         {
             completed = true;
-            camera = Camera.main;
-            cameraNewPosition = new Vector3(winLocation.x, winLocation.y, camera.transform.position.z);
-            CameraShaker.Instance.StartShake(1, 2, 3);
+            CameraShaker.Instance.StartShake(2, 10, 1);
         }
     }
 
@@ -43,11 +35,7 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
         if (completed)
         {
             winTimer += Time.deltaTime;
-            if (winTimer < 2f)
-            {
-                camera.transform.position = Vector3.Lerp(camera.transform.position, cameraNewPosition, winTimer*cameraMovementSpeed);
-                camera.orthographicSize -= Time.deltaTime * cameraZoomSpeed;
-            }
+
             if (winTimer > 3f)
             {
                 int nextLevel = Int32.Parse(SceneManager.GetActiveScene().name.Replace("Level", "")) + 1;

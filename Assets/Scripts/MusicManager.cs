@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
 
     public List<AudioClip> audioClips;
         
-    private static MusicManager instance;
+    public static MusicManager instance;
 
     private AudioSource source;
     void Awake()

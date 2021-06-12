@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class BallRestarter : MonoBehaviour, IGameEventListener
+    public class BallRestarter : MonoBehaviour
     {
         [SerializeField] private GameEvent restartLevel;
 
@@ -14,14 +14,13 @@ namespace DefaultNamespace
         private void Start()
         {
             initialPosition = transform.position;
-            restartLevel.RegisterListener(this);
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Restart();
+                restartLevel.RaiseGameEvent();
             }
         }
 
@@ -30,21 +29,27 @@ namespace DefaultNamespace
             transform.position = initialPosition;
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponent<Collider2D>().enabled = true;
-            GetComponent<Rigidbody2D>().simulated = true;
+            GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<Rigidbody2D>().angularVelocity = 0f;
             GetComponent<TrailRenderer>().Clear();
             GetComponent<BallScript>().dead = false;
         }
 
-        public void RaiseGameEvent()
+        public void RestartDelayed()
         {
-            Restart();
+            if (!IsInvoking(nameof(Restart)))
+            {
+                Invoke(nameof(Restart), 3f);
+            }
         }
-
-        private void OnDestroy()
+        
+        public void RestartNotDelayed()
         {
-            restartLevel.UnregisterListener(this);
+            if (!IsInvoking(nameof(Restart)))
+            {
+                Restart();
+            }
         }
     }
 }

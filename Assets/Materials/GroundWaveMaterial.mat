@@ -40,5 +40,6 @@ Material:
     - Density: 20
     - Speed: 1
     m_Colors:
+    - OutlineColor: {r: 1, g: 0.8239519, b: 0.3915094, a: 1}
     - _Color: {r: 0.4811321, g: 0.1112051, b: 0.4700409, a: 0}
   m_BuildTextureStacks: []

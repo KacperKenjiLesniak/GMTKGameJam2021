@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EZCameraShake;
 using GameEvents.Game;
 using GameEvents.Generic;
@@ -8,31 +10,32 @@ using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace.Physiurg
 {
-    public class LevelManager : MonoBehaviour, IArgumentGameEventListener<Vector2>
+    public class LevelManager : MonoBehaviour
     {
         [SerializeField] private Vector2GameEvent deathEvent;
         [SerializeField] private GameEvent restartLevel;
 
+        private List<Rigidbody2D> balls;
+
+        private void Awake()
+        {
+            balls = GameObject.FindGameObjectsWithTag("Ball").Select(g => g.GetComponent<Rigidbody2D>()).ToList();
+        }
 
         private void Start()
         {
-            deathEvent.RegisterListener(this);
+            balls.ForEach(b => b.simulated = false);
         }
 
-        public void RaiseGameEvent(Vector2 argument)
+        public void StartGame()
         {
-            Invoke(nameof(RestartLevel), 3f);
-            CameraShaker.Instance.ShakeOnce(1, 5, 0.5f, 0.5f);
+            balls.ForEach(b => b.simulated = true);
         }
 
-        private void RestartLevel()
+        public void BallDied(Vector2 argument)
         {
             restartLevel.RaiseGameEvent();
-        }
-
-        private void OnDestroy()
-        {
-            deathEvent.UnregisterListener(this);
+            CameraShaker.Instance.ShakeOnce(1, 5, 0.5f, 0.5f);
         }
     }
 }
