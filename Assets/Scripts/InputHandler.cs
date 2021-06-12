@@ -34,14 +34,14 @@ namespace DefaultNamespace.Physiurg
                 SelectManipulator();
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 activeManipulator -= 1;
                 if (activeManipulator == 0) activeManipulator = physicManipulators.Count;
                 SelectManipulator();
             }
             
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 activeManipulator = activeManipulator % physicManipulators.Count + 1 ;
                 SelectManipulator();
@@ -49,7 +49,7 @@ namespace DefaultNamespace.Physiurg
             
             ScaleInput();
             
-            physicManipulators[activeManipulator - 1].Scale(Input.GetAxis("Vertical") * inputScaler);
+            physicManipulators[activeManipulator - 1].Scale(Input.GetAxis("Horizontal") * inputScaler);
         }
 
         private void SelectManipulator()
@@ -71,11 +71,11 @@ namespace DefaultNamespace.Physiurg
 
         private void ScaleInput()
         {
-            if (Input.GetAxis("Vertical") > 0f)
+            if (Input.GetAxis("Horizontal") > 0f)
             {
                 inputScaler += Time.deltaTime * 5;
             }
-            else if (Input.GetAxis("Vertical") < 0f)
+            else if (Input.GetAxis("Horizontal") < 0f)
             {
                 inputScaler += Time.deltaTime * 5;
             }

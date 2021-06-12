@@ -10,7 +10,7 @@ public abstract class PhysicManipulator : MonoBehaviour
     public float changeSpeed;
     public Slider slider;
     
-    public SliderAlphaChanger sliderAlphaChanger;
+    private SliderAlphaChanger sliderAlphaChanger;
 
     private void Awake()
     {

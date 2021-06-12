@@ -41,8 +41,18 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
                 int nextLevel = Int32.Parse(SceneManager.GetActiveScene().name.Replace("Level", "")) + 1;
                 
                 PlayerPrefs.SetInt("NextLevel", Mathf.Max(nextLevel, PlayerPrefs.GetInt("NextLevel", 1)));
-                
-                SceneManager.LoadScene("Level" + nextLevel);
+
+                Debug.Log("Level" + nextLevel);
+                Debug.Log(SceneManager.GetSceneByName("Level" + nextLevel));
+                Debug.Log(SceneManager.GetSceneByName("Level" + nextLevel).IsValid());
+                if (Application.CanStreamedLevelBeLoaded("Level" + nextLevel))
+                {
+                    SceneManager.LoadScene("Level" + nextLevel);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Win");
+                }
             }
         }
     }
