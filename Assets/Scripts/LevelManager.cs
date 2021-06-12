@@ -1,4 +1,5 @@
 ﻿using System;
+using EZCameraShake;
 using GameEvents.Generic;
 using GameEvents.Vector2;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace DefaultNamespace.Physiurg
         public void RaiseGameEvent(Vector2 argument)
         {
             Invoke(nameof(RestartLevel), 3f);
+            CameraShaker.Instance.ShakeOnce(1, 5, 0.5f, 0.5f);
         }
 
         private void RestartLevel()

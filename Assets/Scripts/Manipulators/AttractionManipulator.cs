@@ -11,6 +11,7 @@ public class AttractionManipulator : PhysicManipulator
     {
         base.Start();
         ballScripts = GameObject.FindGameObjectsWithTag("Ball").Select(o => o.GetComponent<BallScript>()).ToList();
+        ballScripts.ForEach(bs => bs.connectionForce = currentValue);
     }
 
     protected override void UpdatePhysicProperty()

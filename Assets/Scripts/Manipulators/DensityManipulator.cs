@@ -11,6 +11,7 @@ public class DensityManipulator : PhysicManipulator
         base.Start();
         buoyancyEffectors = GameObject.FindGameObjectsWithTag("Water")
             .Select(g => g.GetComponent<BuoyancyEffector2D>()).ToList();
+        buoyancyEffectors.ForEach(effector => effector.density = currentValue);
     }
 
     protected override void UpdatePhysicProperty()

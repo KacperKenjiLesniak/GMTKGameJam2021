@@ -11,6 +11,7 @@ public class BallGravityManipulator : PhysicManipulator
     {
         base.Start();
         rbs = GameObject.FindGameObjectsWithTag("Ball").Select(o => o.GetComponent<Rigidbody2D>()).ToList();
+        rbs.ForEach(rb => rb.gravityScale = currentValue);
     }
 
     protected override void UpdatePhysicProperty()
