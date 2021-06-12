@@ -67,9 +67,8 @@ MonoBehaviour:
   minValue: 0
   maxValue: 10
   currentValue: 6
-  changeSpeed: 2
+  changeSpeed: 4
   slider: {fileID: 0}
-  sliderAlphaChanger: {fileID: 0}
   ballScripts: []
 --- !u!114 &5993750760953320858
 MonoBehaviour:
@@ -88,7 +87,6 @@ MonoBehaviour:
   currentValue: 1
   changeSpeed: 2
   slider: {fileID: 0}
-  sliderAlphaChanger: {fileID: 0}
   rbs: []
 --- !u!114 &1553025992
 MonoBehaviour:
@@ -107,4 +105,3 @@ MonoBehaviour:
   currentValue: 4
   changeSpeed: 2
   slider: {fileID: 0}
-  sliderAlphaChanger: {fileID: 0}

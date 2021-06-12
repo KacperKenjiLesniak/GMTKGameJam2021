@@ -35,7 +35,7 @@ namespace DefaultNamespace.Physiurg
         public void BallDied(Vector2 argument)
         {
             restartLevel.RaiseGameEvent();
-            CameraShaker.Instance.ShakeOnce(1, 5, 0.5f, 0.5f);
+            CameraShaker.Instance.ShakeOnce(3, 5, 0.1f, 0.5f);
         }
     }
 }

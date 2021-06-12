@@ -8,8 +8,6 @@ using UnityEngine.SceneManagement;
 public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector2>
 {
     [SerializeField] private Vector2GameEvent levelCompleteEvent;
-    [SerializeField] private float cameraMovementSpeed;
-    [SerializeField] private float cameraZoomSpeed;
 
     private bool completed;
     private Vector2 winLocation;
@@ -26,7 +24,7 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
         if (!completed)
         {
             completed = true;
-            CameraShaker.Instance.StartShake(2, 10, 1);
+            CameraShaker.Instance.ShakeOnce(2, 10, 1f, 3f);
         }
     }
 
@@ -36,7 +34,7 @@ public class LevelProgression : MonoBehaviour, IArgumentGameEventListener<Vector
         {
             winTimer += Time.deltaTime;
 
-            if (winTimer > 3f)
+            if (winTimer > 2f)
             {
                 int nextLevel = Int32.Parse(SceneManager.GetActiveScene().name.Replace("Level", "")) + 1;
                 
