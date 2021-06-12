@@ -329,8 +329,8 @@ SpriteShapeRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d35f89e4e371a784c8744cb5563cd20b, type: 2}
+  - {fileID: 2100000, guid: d35f89e4e371a784c8744cb5563cd20b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -830,7 +830,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d35f89e4e371a784c8744cb5563cd20b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -852,7 +852,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 953d059aac94d6343b74fb82ab03a88b, type: 3}
-  m_Color: {r: 0.5529412, g: 0.28627452, b: 0.54901963, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1140,7 +1140,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a8131625785851a4e8115aa0480a1055, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1265,24 +1265,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1178bc46170166446b6526b022c3b742, type: 3}
---- !u!1 &1056901061253683521 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7330703786390654773, guid: 1178bc46170166446b6526b022c3b742, type: 3}
-  m_PrefabInstance: {fileID: 1056901061253683520}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1056901061253683522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056901061253683521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b281f6de568b4ac1a04a57bc452da145, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathEvent: {fileID: 11400000, guid: c1dee4b96ebf7f5448b99a34882f4931, type: 2}
 --- !u!4 &1056901061253683523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8492118031568850488, guid: 1178bc46170166446b6526b022c3b742, type: 3}

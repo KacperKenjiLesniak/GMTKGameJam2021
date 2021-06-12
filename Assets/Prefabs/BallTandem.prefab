@@ -4794,7 +4794,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4872,6 +4872,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.44039422
       objectReference: {fileID: 0}
+    - target: {fileID: 2171623708709814772, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a968841b5d754540829a09683a23f96, type: 2}
     - target: {fileID: 2171623708709814773, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
       propertyPath: m_Name
       value: Ball
@@ -5022,6 +5026,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.972549
       objectReference: {fileID: 0}
+    - target: {fileID: 2171623708709814772, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 399d94586b6850849865cb46ddeef834, type: 2}
     - target: {fileID: 2171623708709814773, guid: 3d167d1dd68454140869850bfe68a955, type: 3}
       propertyPath: m_Name
       value: Ball2

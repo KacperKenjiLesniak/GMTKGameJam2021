@@ -1,5 +1,6 @@
 ﻿using System;
 using EZCameraShake;
+using GameEvents.Game;
 using GameEvents.Generic;
 using GameEvents.Vector2;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace DefaultNamespace.Physiurg
     public class LevelManager : MonoBehaviour, IArgumentGameEventListener<Vector2>
     {
         [SerializeField] private Vector2GameEvent deathEvent;
+        [SerializeField] private GameEvent restartLevel;
 
 
         private void Start()
@@ -25,7 +27,7 @@ namespace DefaultNamespace.Physiurg
 
         private void RestartLevel()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            restartLevel.RaiseGameEvent();
         }
 
         private void OnDestroy()

@@ -138,9 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c53c707cb902a438652625a92b2885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectionForce: 6
+  dead: 0
   secondBall: {fileID: 0}
   fragmentedBall: {fileID: 828122648357856692}
-  connectionForce: 6
   levelCompleteEvent: {fileID: 11400000, guid: 4ecfae70e2ff6cd47978426f2ce5ce42, type: 2}
   deathEvent: {fileID: 11400000, guid: c1dee4b96ebf7f5448b99a34882f4931, type: 2}
 --- !u!96 &6937589303574753434
@@ -263,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db652881516395642a826508fd887d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartLevel: {fileID: 11400000, guid: a3802eae63b0c174ea0f44064e52cf3e, type: 2}
 --- !u!1001 &6965051631024451750
 PrefabInstance:
   m_ObjectHideFlags: 0
