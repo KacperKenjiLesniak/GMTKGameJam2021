@@ -8,7 +8,7 @@ namespace DefaultNamespace.Physiurg
     public class InputHandler : MonoBehaviour
     {
         public List<PhysicManipulator> physicManipulators;
-        public float inputScaler = 1f;
+        public float inputScaler = 4f;
         public GameEvent startGame;
         
         private int activeManipulator = 1;
@@ -49,7 +49,10 @@ namespace DefaultNamespace.Physiurg
             
             ScaleInput();
             
-            physicManipulators[activeManipulator - 1].Scale(Input.GetAxis("Horizontal") * inputScaler);
+            
+            physicManipulators[activeManipulator - 1].Scale(
+                Input.GetAxis("Horizontal") * inputScaler
+                );
         }
 
         private void SelectManipulator()
@@ -71,18 +74,18 @@ namespace DefaultNamespace.Physiurg
 
         private void ScaleInput()
         {
-            if (Input.GetAxis("Horizontal") > 0f)
-            {
-                inputScaler += Time.deltaTime * 5;
-            }
-            else if (Input.GetAxis("Horizontal") < 0f)
-            {
-                inputScaler += Time.deltaTime * 5;
-            }
-            else
-            {
-                inputScaler = 1f;
-            }
+            // if (Input.GetAxis("Horizontal") > 0f)
+            // {
+            //     inputScaler += Time.deltaTime * 5;
+            // }
+            // else if (Input.GetAxis("Horizontal") < 0f)
+            // {
+            //     inputScaler += Time.deltaTime * 5;
+            // }
+            // else
+            // {
+            //     inputScaler = 1f;
+            // }
         }
     }
 }

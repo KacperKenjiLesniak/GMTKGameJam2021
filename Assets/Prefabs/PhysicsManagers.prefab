@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 7070163096147225594}
   - {fileID: 5993750760953320858}
   - {fileID: 1553025992}
-  inputScaler: 1
+  inputScaler: 4
   startGame: {fileID: 11400000, guid: 96b6d40c71c33f9479b8fd26743ef934, type: 2}
 --- !u!114 &7070163096147225594
 MonoBehaviour:
@@ -67,7 +67,7 @@ MonoBehaviour:
   minValue: 0
   maxValue: 10
   currentValue: 6
-  changeSpeed: 4
+  changeSpeed: 6
   slider: {fileID: 0}
   ballScripts: []
 --- !u!114 &5993750760953320858
