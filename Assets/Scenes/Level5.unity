@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9057186770771614594, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152.09998
+      objectReference: {fileID: 0}
     - target: {fileID: 9057186770947209388, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -402,12 +406,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.1399975
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.087242
+      value: 11.39448
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -844,12 +852,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.13
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.09
+      value: 11.397238
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1051,12 +1063,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.160248
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.095513
+      value: 11.402751
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1113,12 +1129,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.170006
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.092762
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 6531513752293983569, guid: 0b7b00b434f9e214ba7ce2cab9f9de03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1363,7 +1383,6 @@ PolygonCollider2D:
       - {x: 6.5899997, y: -4.62}
       - {x: 6.41, y: -4.97}
       - {x: 6.39, y: -4.99}
-      - {x: 6.2999997, y: -5.15}
       - {x: 6.24, y: -5.25}
       - {x: 6.14, y: -5.41}
       - {x: 6.0299997, y: -5.5699997}
@@ -1422,7 +1441,7 @@ PolygonCollider2D:
       - {x: 0.45, y: -2.18}
       - {x: 0.42999998, y: -2.09}
       - {x: 0.35999998, y: -1.6899999}
-      - {x: 0.34, y: -1.62}
+      - {x: 0.29999998, y: -1.4399999}
       - {x: 0.25, y: -1.2099999}
       - {x: 0.22, y: -1.0699999}
       - {x: 0.21, y: -1.01}
@@ -1432,31 +1451,22 @@ PolygonCollider2D:
       - {x: 0.06, y: -0.32}
       - {x: 0.04, y: -0.21}
       - {x: 0.02, y: -0.12}
-      - {x: 0, y: -0.01}
-      - {x: -0.04, y: 0.16}
       - {x: -0.07, y: 0.29999998}
       - {x: -0.089999996, y: 0.44}
-      - {x: -0.11, y: 0.45999998}
-      - {x: -0.16, y: 0.65999997}
-      - {x: -0.21, y: 0.83}
-      - {x: -0.26, y: 1.02}
-      - {x: -0.29, y: 1.09}
-      - {x: -0.53, y: 1.09}
-      - {x: -0.75, y: 1.0799999}
-      - {x: -0.81, y: 1.0699999}
-      - {x: -0.83, y: 1.05}
-      - {x: -0.84999996, y: 0.96999997}
-      - {x: -0.88, y: 0.88}
-      - {x: -0.90999997, y: 0.7}
-      - {x: -0.94, y: 0.56}
-      - {x: -0.98999995, y: 0.32}
+      - {x: -0.14999999, y: 0.59}
+      - {x: -0.26, y: 0.68}
+      - {x: -0.35999998, y: 0.69}
+      - {x: -0.72999996, y: 0.69}
+      - {x: -0.82, y: 0.68}
+      - {x: -0.88, y: 0.64}
+      - {x: -0.94, y: 0.55}
+      - {x: -0.96999997, y: 0.42}
       - {x: -1.06, y: -0.03}
       - {x: -1.0799999, y: -0.11}
-      - {x: -1.11, y: -0.24}
-      - {x: -1.13, y: -0.39999998}
+      - {x: -1.12, y: -0.29999998}
       - {x: -1.15, y: -0.44}
       - {x: -1.1899999, y: -0.62}
-      - {x: -1.22, y: -0.78}
+      - {x: -1.1999999, y: -0.68}
       - {x: -1.26, y: -0.95}
       - {x: -1.28, y: -1.05}
       - {x: -1.31, y: -1.1899999}
@@ -1464,12 +1474,17 @@ PolygonCollider2D:
       - {x: -1.39, y: -1.56}
       - {x: -1.42, y: -1.73}
       - {x: -1.4399999, y: -1.81}
-      - {x: -1.49, y: -2.12}
+      - {x: -1.4499999, y: -1.87}
+      - {x: -1.51, y: -2.24}
+      - {x: -1.55, y: -2.45}
       - {x: -1.5699999, y: -2.56}
       - {x: -1.5899999, y: -2.6399999}
       - {x: -1.63, y: -2.83}
       - {x: -1.68, y: -3.05}
-      - {x: -1.76, y: -3.35}
+      - {x: -1.7099999, y: -3.1599998}
+      - {x: -1.73, y: -3.23}
+      - {x: -1.75, y: -3.32}
+      - {x: -1.78, y: -3.4199998}
       - {x: -1.8299999, y: -3.59}
       - {x: -1.93, y: -3.8999999}
       - {x: -1.99, y: -4.0699997}
@@ -1480,7 +1495,6 @@ PolygonCollider2D:
       - {x: -2.26, y: -4.74}
       - {x: -2.3899999, y: -4.99}
       - {x: -2.4099998, y: -5.0099998}
-      - {x: -2.47, y: -5.12}
       - {x: -2.58, y: -5.31}
       - {x: -2.6799998, y: -5.47}
       - {x: -2.79, y: -5.6299996}
