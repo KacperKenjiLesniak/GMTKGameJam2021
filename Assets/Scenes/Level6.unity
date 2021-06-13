@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -355,6 +356,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45365bab4c09e6e4d9750e3a5aabff04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &544579961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,6 +1414,18 @@ PrefabInstance:
       value: '06
 
         You make my heart skip'
+      objectReference: {fileID: 0}
+    - target: {fileID: 244530484432575449, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 244530484432575449, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244530484432575449, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 244530484432575452, guid: 3879450840dcc22448af8dffc6f25fdf, type: 3}
       propertyPath: m_Pivot.x
