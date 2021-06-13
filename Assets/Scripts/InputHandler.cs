@@ -46,10 +46,7 @@ namespace DefaultNamespace.Physiurg
                 activeManipulator = activeManipulator % physicManipulators.Count + 1 ;
                 SelectManipulator();
             }
-            
-            ScaleInput();
-            
-            
+
             physicManipulators[activeManipulator - 1].Scale(
                 Input.GetAxis("Horizontal") * inputScaler
                 );
@@ -70,22 +67,6 @@ namespace DefaultNamespace.Physiurg
             }
  
             return -1;
-        }
-
-        private void ScaleInput()
-        {
-            // if (Input.GetAxis("Horizontal") > 0f)
-            // {
-            //     inputScaler += Time.deltaTime * 5;
-            // }
-            // else if (Input.GetAxis("Horizontal") < 0f)
-            // {
-            //     inputScaler += Time.deltaTime * 5;
-            // }
-            // else
-            // {
-            //     inputScaler = 1f;
-            // }
         }
     }
 }

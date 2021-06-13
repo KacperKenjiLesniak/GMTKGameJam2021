@@ -40,10 +40,10 @@ namespace DefaultNamespace
         {
             if (!IsInvoking(nameof(Restart)))
             {
-                Invoke(nameof(Restart), 3f);
+                Invoke(nameof(SendRestartEvent), 3f);
             }
         }
-        
+
         public void RestartNotDelayed()
         {
             if (!IsInvoking(nameof(Restart)))
@@ -51,5 +51,11 @@ namespace DefaultNamespace
                 Restart();
             }
         }
+        
+        private void SendRestartEvent()
+        {
+            restartLevel.RaiseGameEvent();
+        }
+
     }
 }

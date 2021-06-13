@@ -523,8 +523,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Help them meet each other\n\nModify forces with  \u2190 and \u2192 \n\nSelect
-    forces with num keys or \u2191 and \u2193\n\nPress R to restart level"
+  m_text: "Modify forces with  \u2190 and \u2192 \n\nSelect forces with num keys
+    or \u2191 and \u2193\n\nPress R to restart level"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 987d17041d66f244a8c875d165770b6b, type: 2}
   m_sharedMaterial: {fileID: 377371750265937209, guid: 987d17041d66f244a8c875d165770b6b, type: 2}
