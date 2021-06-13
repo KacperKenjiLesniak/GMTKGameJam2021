@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,7 @@ public abstract class PhysicManipulator : MonoBehaviour
 
     public void Scale(float modifier)
     {
-        currentValue += modifier * Time.deltaTime * changeSpeed;
+        currentValue += modifier * Time.deltaTime * ( maxValue - minValue) * Constants.CHANGE_SPEED ;
 
         currentValue = Mathf.Clamp(currentValue, minValue, maxValue);
 

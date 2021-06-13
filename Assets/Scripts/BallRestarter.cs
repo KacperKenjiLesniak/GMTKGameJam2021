@@ -38,7 +38,7 @@ namespace DefaultNamespace
 
         public void RestartDelayed()
         {
-            if (!IsInvoking(nameof(Restart)))
+            if (!IsInvoking(nameof(SendRestartEvent)))
             {
                 Invoke(nameof(SendRestartEvent), 3f);
             }
@@ -46,16 +46,13 @@ namespace DefaultNamespace
 
         public void RestartNotDelayed()
         {
-            if (!IsInvoking(nameof(Restart)))
-            {
-                Restart();
-            }
+            CancelInvoke(nameof(SendRestartEvent));
+            Restart();
         }
-        
+
         private void SendRestartEvent()
         {
             restartLevel.RaiseGameEvent();
         }
-
     }
 }
